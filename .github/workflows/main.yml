@@ -1,0 +1,20 @@
+name: flask_pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  my_testing:
+    runs-on: ubuntu-latest
+    steps:
+    - name: hello-message
+      run: echo "Hello from pipeline first job"
+
+
+  my_deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: hello-message
+      run: echo "Hello from pipeline second job"
